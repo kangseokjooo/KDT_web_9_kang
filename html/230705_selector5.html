@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자(속성선택자)</title>
+    <style>
+        div [type=text]{
+            background-color: green;
+        }
+        *:not([disabled]){
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" value="HEROPY"/>
+    <input type="password" value="1234"/>
+    <input type="text" value="ABCD" disabled/>
+</body>
+</html>

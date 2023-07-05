@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자공부 2(가상클래스)-1</title>
     <style>
-        .fruits span:first-child{
+        /* .fruits span:first-child{
             color: red;
         }
         .fruits h3:last-child{
             color: orange;
+        } */
+        /* .fruits *:nth-child(2n){
+            background-color: green;
+            color: white;
+        } */
+        .fruits *:not(span){
+            background-color: green;
+            color: white;
         }
     </style>
 </head>
