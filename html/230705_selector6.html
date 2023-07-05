@@ -8,18 +8,20 @@
         /* 속성값의 변수화*/
         /* 변수:특정값을 저장하는공간*/
         /*변수 선언방법 --붙이기!*/
+
         :root{
             --main-color:navy;
             --main-bg-color:white;
             --sub-color:green;
+            --main-font:900;
         }
         div{
             color: var(--main-color);
-            font-weight: 900;
+            font-weight: var(--main-font);
         }
         p{
             color:var(--sub-color);
-            background-color: var(--main-color);
+            background-color: var(--main-bg-color);
         }
 
     </style>
