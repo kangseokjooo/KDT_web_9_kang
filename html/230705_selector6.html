@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 6 개념</title>
+    <style>
+        /* 속성값의 변수화*/
+        /* 변수:특정값을 저장하는공간*/
+        /*변수 선언방법 --붙이기!*/
+        :root{
+            --main-color:navy;
+            --main-bg-color:white;
+            --sub-color:green;
+        }
+        div{
+            color: var(--main-color);
+            font-weight: 900;
+        }
+        p{
+            color:var(--sub-color);
+            background-color: var(--main-color);
+        }
+
+    </style>
+</head>
+<body>
+    <div>안녕</div>
+    <p>안녕하세요</p>
+</body>
+</html>
