@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 공부1</title>
+    <style>
+        div > p{
+            color: blue;
+        }
+        div > ul > .orange{
+            color: orange;
+        }
+        div .orange{
+            background-color:red;
+        }
+        ul + div{
+            color: blueviolet;
+        }
+        .apple ~ li{
+            font-weight: 900;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="apple">사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+</body>
+</html>
