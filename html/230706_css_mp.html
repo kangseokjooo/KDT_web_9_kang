@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 과 패딩</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .block{
+            color:white;
+            font-size: 2em;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            /*  margin-top: 100px;
+            margin-left: 100px;
+            /* margin-bottom: 50px;
+            margin-right: 20px; 
+            margin: 100px 0px 0px 100px; 
+            margin: 100px; */
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+        .mm-width{
+            background-color: red;
+            color: white;
+            font-size: 30px;
+            line-height: 100px;
+            /* width: 80vw; */
+            height: 100px;
+            /* max-width: 1000px; */
+            min-width: 300px;
+
+            width: calc(100vw - 100px);
+            margin: auto;
+            padding: auto;
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!--마진은 외부 여백/패딩은 내부 여백->보더를 기준--> <!--마진->보더->패딩->컨텐츠-->
+    <div class="block">안녕</div>
+    <span class="inline"></span> <!--inline 요소헤서는 마진이 안먹는다-->
+    <div class="mm-width">SSSSS</div>
+</body>
+</html>
