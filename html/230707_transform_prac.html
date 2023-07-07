@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            width: 700;
+            height: 700;
+            background-color: antiquewhite;
+        }
+        #t1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            transform: skewY(45deg);
+            z-index: 3;
+        }
+        #t2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            transform: skewY(45deg);
+            left: 50px;
+            /* top: -100px; */
+            z-index: 2;
+        }
+        #t3{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            transform: skewY(45deg);
+            left: 100px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img 
+        id="t1" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+        <img 
+        id="t2" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+        <img 
+        id="t3" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+    </div>
+</body>
+</html>
