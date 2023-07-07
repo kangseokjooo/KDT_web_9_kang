@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position prac</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: bisque;
+        }
+        .item1{
+            position: relative;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            bottom: -30px;
+        }
+        .item2{
+            position: absolute;
+            background-color:gold;
+            width: 100px;
+            height: 100px;
+            right: 30px;
+            bottom: 100px;
+        }
+        .item3{
+            position: fixed;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            right: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+</body>
+</html>
