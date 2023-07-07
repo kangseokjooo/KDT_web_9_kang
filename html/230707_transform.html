@@ -11,7 +11,11 @@
         img{
             width: 100px;
             height:100px;
-            
+            /* transition-property:transform;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 2s; */
+            transition: 2s linear 2s;
         }
         img#translate:active{
             transform: translate(100px,40px);
@@ -25,10 +29,24 @@
         }
         img#skew:active{
             transform: skewY(-45deg);
+            
+        }
+        .box{
+            margin-left: 0;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            transition: margin-left 2s;
+        }
+        .box:hover{
+            width: 200px;
+            height: 200px;
+            margin-left: 100px;
         }
     </style>
 </head>
 <body>
+    <div class="box"></div>
     <div>
 
         <img 
