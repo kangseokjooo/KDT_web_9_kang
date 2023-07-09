@@ -30,6 +30,10 @@
     .header1 {
         display:flex
     }
+    .header1 > menus{
+      display: flex;
+      flex-direction: row;
+    }
     
     /* header2 */
     .header2 {

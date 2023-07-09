@@ -4,54 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header prac</title>
-    <link rel="stylesheet" href="./css/230708_header_prac.css"/>
     <style>
-        h4{
-            text-align: center;
-            background-color: pink;
-            color: aliceblue;
-        }
+* {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menus1 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* align-items:flex-end; */
+    /* flex-wrap: nowrap; */
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  .li1:nth-last-child(1){
+    position: absolute;
+    right: 0px;
+  }
+  .li1:nth-last-child(2){
+    position: absolute;
+    right: 100px;
+  }
+  .li1:nth-last-child(3){
+    position: absolute;
+    right: 200px;
+  }
+  span{
+    position: relative;
+    bottom: -20px;
+    display: inline;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  header {
+    width: 100%;
+    height: 60px;
+    background-color: #ddd;
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+    /* header1 */
+    .header1 {
+        display:flex
+    }
+    
+    /* header2 */
+    .header2 {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    /* header3 */
+    .header3 {
+      display: none;
+    }
+    
+    /* header4 */
+    .header4 {
+      display: none;
+    }
+  h1 {
+    text-align: center;
+  }
+  
+  header {
+    width: 100%;
+    height: 60px;
+    background-color: #ddd;
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+    /* header1 */
+    .header1 {
+        
+    }
+    /* header2 */
+    .header2 {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    /* header3 */
+    .header3 {
+      display: none;
+    }
+    
+    /* header4 */
+    .header4 {
+      display: none;
+    }
+    h4{
+        text-align: center;
+        background-color: pink;
+        color: aliceblue;
+    }
+    .menus2{
+        bottom: -20px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+    
+    }
+    .li2:nth-child(1){
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        right:600px
+    }
+    .li2:nth-child(3){
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        left:600px
+    }
+    .menus3{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .log1{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        bottom: 30px;
+    }
+   .li3:nth-child(1){
+    position: relative;
+    right: 40px;
+   }
+   .li3:nth-child(2){
+    position: relative;
+    right: 0px;
+   }
+   .li3:nth-child(3){
+    position: relative;
+    left: 40px;
+   }
+   .menu-left{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+   }
+   .menus4{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    bottom: -20px;
+    left: 20px;
+    justify-content: center;
+   }
+   .li4:nth-child(1){
+    position: relative;
+    left: 0;
+   }
+   .li4:nth-child(2){
+    position: relative;
+    left: 20px;
+   }
+   .li4:nth-child(3){
+    position: relative;
+    left: 40px;
+   }
+   .menu-right{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+   }
+   .li5{
+    position: relative;
+    right: 40px;
+   }
     </style>
 </head>
 <body>
     <h1>FLEX를 이용해 여러 종류의 HEADER를 만들어보자!</h1>
     <header class="hearder1">
         <span>LOGO</span>
-        <ul class="menus">
-            <li>MENU1</li>
-            <li>MENU2</li>
-            <li>MENU3</li>
+        <ul class="menus1">
+            <li class="li1">MENU1</li>
+            <li class="li1">MENU2</li>
+            <li class="li1">MENU3</li>
         </ul>
     </header>
     <header class="hearder2">
-        <span>LOGO</span>
-        <ul class="menus">
-            <li>MENU1</li>
-            <li>MENU2</li>
-            <li>MENU3</li>
+        <ul class="menus2">
+            <li class="li2">MENU1</li>
+            <li class="li2">MENU2</li>
+            <li class="li2">MENU3</li>
         </ul>
     </header>
     <header class="hearder3">
         <span>LOGO</span>
-        <ul class="menus">
-            <li>MENU1</li>
-            <li>MENU2</li>
-            <li>MENU3</li>
+        <ul class="menus3">
+            <li class="li3">MENU1</li>
+            <li class="li3">MENU2</li>
+            <li class="li3">MENU3</li>
         </ul>
-        <span>LOGIN</span>
+        <span class="log1">LOGIN</span>
     </header>
     <h4>header4는 선택입니다!</h4>
     <header class="hearder4">
         <div class="menu-left">
         <span>LOGO</span>
-        <ul class="menus">
-            <li>MENU1</li>
-            <li>MENU2</li>
-            <li>MENU3</li>
+        <ul class="menus4">
+            <li class="li4">MENU1</li>
+            <li class="li4">MENU2</li>
+            <li class="li4">MENU3</li>
         </ul>
         </div>
         <ul class="menu-right">
-            <li>LOGIN</li>
+            <li class="li5">LOGIN</li>
             <li>SIGNUP</li>
         </ul>
     </header>
