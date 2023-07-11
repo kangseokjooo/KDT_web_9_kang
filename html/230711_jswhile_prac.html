@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 문 실습</title>
+</head>
+<body>
+    <script>
+        let n1=Number(prompt("숫자 입력:"))
+        let i=0;
+        let sum=0;
+        while(i<n1){
+            if(i%2==0||i%3==0){
+                sum+=i;
+            }
+            i++
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

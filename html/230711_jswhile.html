@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While 개념</title>
+</head>
+<body>
+    <script>
+        let fruits=["apple","banana","orange","grape","aaaaaa"];
+        let index=-1;
+        //반복횟수를 지정할수없을때 while을 사용 ex)1~사용자입력숫자의 합을 구하는 것
+        while(index<fruits.length-1){
+            index++;
+            if(fruits[index]=="banana"){
+                continue
+            };
+            console.log(fruits[index])
+        }
+        let num=NaN;
+        // while(isNaN(num)){
+        //     num=Number(prompt("숫자입력:"))
+        //     console.log(num);
+        // }
+        let number=5;
+        //while문은 반복될 횟수가 지정되어있지않을때 사용
+        while(true){
+            number=Number(prompt("10이상 숫자입력:"))
+            if(number>=10){
+                console.log("끝!")
+                break;
+            }
+        }
+        // console.log(isNaN(num))
+        // let i = 2;
+        // while(i<10) {
+        //     let j = 1;
+        //     while (j<10){
+        //         console.log(`${i}x${j} = ${i*j}`)
+        //         j++;
+        //     }
+        //     i++;
+        // }
+    </script>
+</body>
+</html>
