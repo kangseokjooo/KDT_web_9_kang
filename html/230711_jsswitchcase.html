@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch 개념</title>
+</head>
+<body>
+    <script>
+        let name="홍길동"
+        switch (name){
+            case "성춘향":
+                console.log("여자")
+                break;
+            case "홍길동":
+                console.log("남자")
+                break;
+            default:
+                console.log("잘모름!")
+                break;
+        }
+        //삼항연산자 조건?참일경우:거짓일경우
+        let age=23;
+        // (age>=20 && age<=100)? console.log("성인"):console.log("미성년자");
+        let state=age>=20?'성인':'미성년자';
+        console.log(state)
+    </script>
+</body>
+</html>
