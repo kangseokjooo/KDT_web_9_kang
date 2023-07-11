@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick 실습 문제</title>
+</head>
+<body>
+    <script>
+        let n1=prompt("숫자1");
+        let n2=prompt("숫자2");
+        function add(a,b){
+            let n1=Number(a)
+            let n2=Number(b)
+            alert("두수의 덧셈은:"+" "+(n1+n2));    
+        }
+        
+        function mul(a,b){
+            let n1=Number(a)
+            let n2=Number(b)
+            alert(n1*n2); 
+        }
+        function divide(a,b){
+            let n1=Number(a)
+            let n2=Number(b)
+            alert(n1/n2);
+        }
+        function sub(a,b){
+            let n1=Number(a)
+            let n2=Number(b)
+            alert(n1-n2);
+        }
+    </script>
+    <button onclick="add(n1,n2)">더하기</button>
+    <button onclick="sub(n1,n2)">빼기</button>
+    <button onclick="mul(n1,n2)">곱하기</button>
+    <button onclick="divide(n1,n2)">나누기</button>
+</body>
+</html>

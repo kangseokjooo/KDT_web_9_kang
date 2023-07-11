@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 연습 문제</title>
+</head>
+<body>
+    <script>
+        let age=Number(prompt("나이를 입력하세요"))
+        let s=prompt("성별을 입력해주세요")
+        if(age>=20){
+            if(s=='m'){
+            alert("남자 성인!")
+            }
+            else if(s=='f'){
+            alert("여자 성인!")
+            }
+        }else if(age<20&&age>=17){
+            if(s=='m'){
+            alert("남자 고등!")
+            }
+            else if(s=='f'){
+            alert("여자 고등!")
+            }
+        }else if(age<17&&age>=14){
+            if(s=='m'){
+            alert("남자 중등!")
+            }
+            else if(s=='f'){
+            alert("여자 중등!")
+            }
+        }
+        else if(age<14&&age>=8){
+            if(s=='m'){
+            alert("남자 초등!")
+            }
+            else if(s=='f'){
+            alert("여자 초등!")
+            }
+        }else{
+            if(s=='m'){
+            alert("남자 유아!")
+            }
+            else if(s=='f'){
+            alert("여자 여자!")
+            }
+        }
+    </script>
+    
+</body>
+</html>
