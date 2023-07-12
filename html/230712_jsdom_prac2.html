@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom prac2</title>
+    <style>
+        div{
+            font-weight: 900;
+        }
+        div.container{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        input#author{
+            margin-top: 10px;
+            width: 100px;
+        }
+        input#author{
+            margin-top: 10px;
+            width: 100px;
+        }
+        input#content{
+            margin-top: 10px;
+            width: 200px;
+        }
+        button{
+            margin-top: 10px;
+            width: 50px;
+        }
+        table{
+            margin-top: 40px;
+            width:400px;
+        }
+    </style>
+</head>
+<body>
+    <div>안녕하세요 방명록입니다.</div>
+    <div class="container">
+        작성자<input type="text" id="author"/> 
+        내용<input type="text" id="content"/>
+        <button type="button" onclick="addRow()" class="bt">작성</button>
+        <table border="1" cellspacing="0">
+        <tr>
+            <td>번호</td>
+            <td>작성자</td>
+            <td>내용</td>
+            <td>작성일</td>
+        </tr>
+        </table>
+    </div>
+    <script>
+        let num=1;
+        function addRow(){
+            let table=document.querySelector("table");
+            
+            let tr=document.createElement("tr");
+            
+            let td=document.createElement("td");
+            td.innerText=num;
+            
+            let writerTd=document.createElement("td");
+            let writer=document.getElementById("author").value
+            writerTd.innerText=writer;
+            
+            let contentTd=document.createElement("td");
+            let content=document.getElementById("content").value
+            contentTd.innerText=content;
+            
+            let dateTd=document.createElement("td");
+            dateTd.innerText=new Date();
+            
+            tr.appendChild(td);
+            tr.appendChild(writerTd);
+            tr.appendChild(contentTd);
+            tr.appendChild(dateTd);
+            table.appendChild(tr);
+            num++;
+        }
+    </script>
+</body>
+</html>

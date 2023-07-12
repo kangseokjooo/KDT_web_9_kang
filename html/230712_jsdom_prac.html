@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+        div input{
+            width:100px;
+        }
+        button{
+            width: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+    값1:<input type="text" id="v1"/>
+    값2:<input type="text" id="v2"/>
+    연산자:<input type="text" id="v3"/>
+    결과:<input type="text" id="v4"/>
+    <button type="button" onclick="calculate()">계산하기</button>
+    <button type="button" onclick="era()">초기화</button>
+    </div>
+    <script>
+        function calculate(){
+            let i1=document.getElementById("v1").value
+            let i2=document.getElementById("v2").value
+            let i3=document.getElementById("v3").value
+            let result=0;
+            switch(i3){
+                case '+':result=Number(i1)+Number(i2);
+                document.getElementById("v4").value=result;
+                break;
+                case '-':result=Number(i1)-Number(i2);
+                document.getElementById("v4").value=result;
+                break;
+                case '*':result=Number(i1)*Number(i2);
+                document.getElementById("v4").value=result;
+                break;
+                case '/':result=Number(i1)/Number(i2);
+                document.getElementById("v4").value=result;
+                break;
+            }
+        }
+        function era(){
+            let era=" ";
+            document.getElementById("v1").value=era;
+            document.getElementById("v2").value=era;
+            document.getElementById("v3").value=era;
+            document.getElementById("v4").value=era;
+        }
+        
+
+    </script>
+</body>
+</html>
