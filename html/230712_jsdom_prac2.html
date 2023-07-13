@@ -71,13 +71,27 @@
             let dateTd=document.createElement("td");
             dateTd.innerText=new Date();
             
+            table.appendChild(tr);
             tr.appendChild(td);
             tr.appendChild(writerTd);
             tr.appendChild(contentTd);
             tr.appendChild(dateTd);
-            table.appendChild(tr);
             num++;
         }
+        // let table = document.querySelector("table");
+        //     // tr 태그 생성
+        //     let tr = document.createElement("tr");
+            
+        //     let writer = document.getElementById("writer").value
+        //     let comment = document.getElementById("comment").value
+        //     let date = new Date()
+        //     let dateStr = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
+            
+        //     tr.innerHTML = `
+        //         <td>${num}</td>
+        //         <td>${writer}</td>
+        //         <td>${comment}</td>
+        //         <td>${dateStr}</td>
     </script>
 </body>
 </html>
