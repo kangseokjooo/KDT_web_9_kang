@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <style>
+        .container{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button">버튼</button>
+        <input type="text" name="id" id="id"/>
+        <input type="passwrd" name="pw" id="pw"/>
+    </div>
+    <script>
+        // $().on("click",function(){
+
+        // })
+
+        // $(window).ready(function(){
+        //     $(".container").append('<h1>안녕</h1>');
+        // })
+        // $(function(){ //페이지 로드 완료후에 실행되는 함수
+        //     $(".container").append('<h1>안녕</h1>');
+        // })
+        // $().on("click",function(){
+        //     alert("클릭")
+        // })
+
+        // $("button").mouseover(function(){ //호버는 호버되는 순간에 계속 실행
+        //     alert("클릭")
+        // })
+        $(window).scroll(function(){ //호버는 호버되는 순간에 계속 실행
+            console.log("스크롤")
+        })
+
+        $("input").keyup(function(e){
+            //keyup은 뗄때 동작
+            console.log(this)
+            console.log(e.key==='Enter');
+        })
+    </script>
+</body>
+</html>
