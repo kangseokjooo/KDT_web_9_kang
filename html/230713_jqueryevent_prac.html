@@ -12,12 +12,14 @@
         .blue{
             color: blue;
         }
-        
+        input{
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="container">2022년 7월
-    <table border="1" cellspacing="3" width="500px" height="300px" id="table">
+    <table border="1" cellspacing="3" width="1000px" height="500px" id="table">
         <tr>
             <td class="red">일</td>
             <td>월</td>
@@ -88,13 +90,14 @@
 </div>
 <script>
     let td=null;
+    console.log($("button").text())
     $("td").click(function(){
         td=this
         $(".date").val($(this).text());
     })
     $("button").click(function(){
         let c=$(".content").val()
-        $(td).append(c);
+        $(td).append(c)
     })
     
 </script>
