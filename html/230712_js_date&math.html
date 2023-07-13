@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS date&math</title>
+</head>
+<body>
+    <script>
+            let now = new Date() //2023 07 12 오늘 기준!
+       let expired =new Date('2023-08-07');
+       console.log(expired);
+       console.log(now)
+       console.log(now.getFullYear());
+       console.log(now.getMonth()+1); //getMonth는 실제 월 -1 로 출력
+       console.log(now.getDate())
+       console.log(now.getDay()); //날짜 0~6까지로 표기 일:0~~
+       console.log(now.getTime() >= expired.getTime()); //1970년 1월 1일 00시를 기준으로 흐른새월 초단위로!
+       let year=now.getFullYear();
+       let month=now.getMonth()+1
+       let date=now.getDate()
+       console.log(`${year}-${month>=10 ? month:"0"+month}-${date>=10 ? date:"0"+date}`);
+        console.log(Math.PI)
+        console.log(Math.E);
+        console.log(Math.min(2,5,10,8));
+        console.log(Math.max(2,5,10,8));
+        console.log(Math.random())
+        console.log(Math.round(7.59))
+        console.log(Math.round(7.2))
+        console.log(Math.floor(7.59))
+        console.log(Math.floor(7.2))
+        console.log(Math.ceil(7.54343))
+        Math.random()*(100-1)*1;
+        console.log(Math.floor(Math.random()*(100-1)*1));
+        let arr=[];
+        for(let i=0;i<5;i++){
+            arr[i]=Math.floor(Math.random()*(100-1)*1);
+        }
+        console.log(arr);
+
+    </script>
+</body>
+</html>

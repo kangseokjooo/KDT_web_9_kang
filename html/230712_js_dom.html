@@ -67,7 +67,7 @@
         createBox.className="box green";
         
         // container.prepend(createBox); //부모요소(container)에 가장 마지막 자식으로 추가
-        orangeBox.after(createBox); 
+        container.appendChild(createBox);
         //container.prepend() 첫째로 추가
             // container.append("안녕")
             // container.appendChild()
@@ -91,18 +91,19 @@
 
         // console.log(redBox.classList.add())
 
-        // function orangeToggle(){
-        //     let orangeBox=document.getElementsByClassName("box");
-        //     orangeBox[1].classList.toggle("orange");
-        // }
-        // function yellowToggle(){
-        //     let yellowBox=document.getElementsByClassName("box");
-        //     yellowBox[2].classList.toggle("yellow");
-        // }
+        function orangeToggle(){
+            let orangeBox=document.getElementsByClassName("box");
+            orangeBox[1].classList.toggle("orange");
+        }
+        function yellowToggle(){
+            let yellowBox=document.getElementsByClassName("box");
+            yellowBox[2].classList.toggle("yellow");
+        }
 
-        // function redToggle(){
-        //     let redBox=document.getElementsByClassName("box");
-        //     redBox[0].classList.toggle("red");
+        function redToggle(){
+            let redBox=document.getElementsByClassName("box");
+            redBox[0].classList.toggle("red");
+        }
         
             
         //     //classList 속성은 toggle 함수 제공
