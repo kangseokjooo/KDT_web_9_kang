@@ -15,6 +15,10 @@
         input{
             display: block;
         }
+        td {
+            vertical-align: top;;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -84,20 +88,19 @@
             <td></td>
         </tr>
     </table>
-   날짜:<input type="text" class="date"/>
-   내용:<input type="text" class="content"/>
-   <button type="button">작성</button>
+    날짜:<input type="text" class="date"/>
+    내용:<input type="text" class="content"/>
+    <button type="button">작성</button>
 </div>
 <script>
     let td=null;
-    console.log($("button").text())
     $("td").click(function(){
-        td=this
+        td=this;
         $(".date").val($(this).text());
     })
     $("button").click(function(){
         let c=$(".content").val()
-        $(td).append(c)
+        $(td).parent().append(`<div>${c}<div>`);
     })
     
 </script>
