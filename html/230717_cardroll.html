@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin:auto;
+            position: relative;
+            cursor: pointer;
+            perspective: 100rem;
+        }
+        .card{
+            width: 200px;
+            height: 300px;
+            backface-visibility: hidden;
+            visibility: visible;
+            transition: 2s linear;
+        }
+        .front{
+            position:absolute;
+            background-color: blue;
+            transform: rotate(0deg);
+        }
+        .back{
+            background-color: red;
+            transform: rotateY(-180deg);
+        }
+        .container:hover .front{
+            transform: rotateY(180deg);
+        }
+        .container:hover .back{
+            transform: rotateY(0deg);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="front card">
+            <p>앞</p>
+        </div>
+        <div class="back card">
+            <p>뒤</p>
+        </div>
+    </div>
+</body>
+</html>
