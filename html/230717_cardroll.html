@@ -6,45 +6,54 @@
     <title>Document</title>
     <style>
         .container{
-            margin:auto;
             position: relative;
-            cursor: pointer;
-            perspective: 100rem;
+            justify-content: center;
+            align-items: center;
         }
-        .card{
-            width: 200px;
-            height: 300px;
-            backface-visibility: hidden;
-            visibility: visible;
-            transition: 2s linear;
+        .card {
+        position: relative;
+        top:20vw;
+        left: 30vw;
+          display: inline-grid;
+          color: white;
+          transition: transform 2s;
+          transform: perspective(800px) rotateY(0deg);
+          transform-style: preserve-3d;
         }
-        .front{
-            position:absolute;
-            background-color: blue;
-            transform: rotate(0deg);
+    
+        .card:hover {
+          transform: perspective(800px) rotateY(180deg);
         }
-        .back{
-            background-color: red;
-            transform: rotateY(-180deg);
+    
+        .card > * {
+          grid-area: 1 / 1 / 1 / 1;
+          width: 200px;
+          height: 300px;
+          padding: 12px;
+          border-radius: 8px;
+          backface-visibility: hidden;
         }
-        .container:hover .front{
-            transform: rotateY(180deg);
+    
+        .card-front {
+          background: linear-gradient(rgb(80, 67, 52), rgb(111, 93, 73));
         }
-        .container:hover .back{
-            transform: rotateY(0deg);
+    
+        .card-back {
+          background: linear-gradient(rgb(127, 106, 83), rgb(156, 132, 104));
+          transform: rotateY(180deg);
         }
-
-        
-    </style>
+      </style>
 </head>
 <body>
     <div class="container">
-        <div class="front card">
-            <p>앞</p>
-        </div>
-        <div class="back card">
-            <p>뒤</p>
-        </div>
+        <div class="card">
+            <div class="card-front"></div>
+            <div class="card-back"></div>
+      </div>
+      <div class="card">
+            <div class="card-front"></div>
+            <div class="card-back"></div>
+      </div>
     </div>
 </body>
 </html>
