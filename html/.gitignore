@@ -1,0 +1,3 @@
+*.txt
+module/
+.DS_store
