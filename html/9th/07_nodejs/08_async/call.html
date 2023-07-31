@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback hell</title>
+</head>
+<body>
+    <script>
+    //     function color(){
+    //     //callback hell
+    //     return new Promise(function(resolve,reject){
+    //         resolve();
+    //     setTimeout(function(){
+    //         document.body.style.backgroundColor='red';
+    //         setTimeout(function(){
+    //             document.body.style.backgroundColor='orange';
+    //             setTimeout(function(){
+    //                 document.body.style.backgroundColor='yellow';
+    //                 setTimeout(function(){
+    //                     document.body.style.backgroundColor='green';
+    //                     setTimeout(function(){
+    //                         document.body.style.backgroundColor='blue';
+    //                     },1000)
+    //                 },1000)
+    //             },1000)
+    //         },1000)
+    //     },1000)
+    // });
+    // };
+    // color().then();
+    function changeBgColor(color){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                document.body.style.backgroundColor=color;
+                resolve();
+            },1000)
+
+        })
+    }
+    changeBgColor('red').then(()=>{
+        return changeBgColor('orange');
+    }).then(()=>{
+        return changeBgColor('green');
+    }).then(()=>{
+        return changeBgColor('purple');
+    }).then(()=>{
+        return changeBgColor('blue');
+    }).then(()=>{
+        return changeBgColor('white');
+    })
+
+    // async function exec(){
+    //     await changeBgColor()
+
+    // }
+    </script>
+</body>
+</html>
