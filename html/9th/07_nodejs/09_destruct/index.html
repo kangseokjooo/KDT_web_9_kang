@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열구조 분해
+        const lists=['apple','grape'];
+        //기존방식
+        console.log(lists[0],lists[1]);
+        //구조 분해방식
+        [item1,item2,item3='peach']=lists;
+        console.log("i1:"+item1,"i2:"+item2);
+        item1='peach';
+        console.log(item1,item3);
+        //교환
+        let x=1,y=3;
+        [x,y]=[y,x];
+        console.log(x,y);
+        //객체
+        const Person={
+            //key:value
+            name:'kang',
+            age:19,
+            gender:'M',
+            friends:['alex','kevin'],
+            hello:function(){
+                console.log('hello');
+            },
+            "kdt-9":'codingon'
+        };
+        console.log(Person.name);
+        Person.age=29;
+        console.log(Person.age);
+        console.log(Person.friends[0]);
+        Person.hello();
+        console.log(Person['name']);
+        console.log(Person['kdt-9']);
+        Person.city='Seoul';
+        console.log(Person);
+        //객체 구조분해
+        const {name,city,gender,key='HI',age:myAge}=Person;
+        console.log(name,city,gender,key,myAge);
+        //spread연산자
+        
+    </script>
+</body>
+</html>
