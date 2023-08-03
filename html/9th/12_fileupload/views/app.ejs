@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>파일 업로드 실습</title>
+</head>
+<body>
+        <label for="id">아이디</label>
+        <input type="text" name="id" id="id" /><br>
+        <label for="pw">비밀번호</label>
+        <input type="password" name="pw" id="pw" /><br>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" /><br>
+        <label for="id">나이</label>
+        <input type="text" name="age" id="age" /><br>
+        <label for="dynamic-file">프로필 사진</label>
+        <input type="file" name="dynamic-file" id="dynamic-file"/>
+        <div class="result1"></div>
+        <div class="result2"></div>
+        <button type="button">리셋</button>
+        <button type="button" onclick="fileupload()" >회원가입</button>
+   
+   <script>
+        const resultBox0=document.querySelector('.result1')
+        const resultBox=document.querySelector('.result2')
+        function fileupload(){
+            const file=document.getElementById('dynamic-file')
+            const id=document.getElementById('id');
+            const pw=document.getElementById('pw');
+            const name=document.getElementById('name');
+            const age=document.getElementById('age');
+            console.log(id.value);
+            console.log(file.files[0]);
+
+            const formData=new FormData()
+            formData.append('id',id.value);
+            formData.append('pw',pw.value);
+            formData.append('name',name.value);
+            formData.append('age',age.value);
+            formData.append('dynamic-file',file.files[0]);
+            axios({
+                method:'POST',
+                url:'/upload/prac',
+                data:formData,
+                headers:{
+                    'Content-Type':'multipart/form-data'
+                }
+            }).then((res)=>{
+                console.log('res',res)
+                const { data, file } =res.data; 
+                resultBox0.innerHTML=`<div>
+                    id:${data.id}
+                    password:${data.pw}
+                    이름:${data.name}
+                    나이:${data.age}
+                    </div>`
+                resultBox.innerHTML=`<div><img src=${file.path}></div>`
+            })
+        }
+    </script>
+</body>
+</html>
