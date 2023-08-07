@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form name="register">
+        <label for="id">아이디</label>
+        <input type="text" name="id" id="id">
+        <label for="pw">패스워드</label>
+        <input type="text" name="pw" id="pw">
+        <button type="button" onclick="axiosPost()">로그인</button>
+        <div class="result"></div>
+    </form>
+    <script>
+        const resultBox=document.querySelector('.result');
+        function axiosPost(){
+            console.log('axios post')
+            const form=document.forms['register']
+            const data={
+                id:form.id.value,
+                pw:form.pw.value
+            }
+            axios({
+                method:'POST',
+                url:'/axiospost',
+                data:data
+            }).then((res)=>{
+                console.log('res',res);
+                if(res.data==true){
+                    resultBox.textContent='성공';
+                    resultBox.style.color='green';
+                }else{
+                    resultBox.textContent='실패';
+                    resultBox.style.color='red';
+                }
+            
+            });
+        }
+
+    </script>
+</body>
+</html>
