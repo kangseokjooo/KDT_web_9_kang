@@ -1,11 +1,13 @@
 const express=require('express')
 const session=require('express-session')
+const jwt=require('jsonwebtoken');
 const app=express();
 const PORT=8000;
 
 
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended:true}))
+app.use(express.json());
 app.use(session({
     secret:'secretKey',
     resave:false,
