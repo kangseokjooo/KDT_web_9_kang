@@ -4,7 +4,6 @@ const controller = require('../controller/user');
 
 router.get('/', controller.index);
 router.get('/signup',controller.signup)
-
 router.get('/signin',controller.getSignin)
 
 
