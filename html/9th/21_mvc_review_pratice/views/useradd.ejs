@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원 정보추가</h1>
+    <input type="text"  id="name" placeholder="이름">
+    <input type="text" id="gender" placeholder="성별">
+    <input type="text" id="major" placeholder="전공">
+    <button type="button" onclick="userAdd()">회원추가</button>
+</body>
+
+<script>
+    function userAdd(){
+    const body=document.querySelector('body')
+    const name=document.querySelector('#name').value;
+    const gender=document.querySelector('#gender').value;
+    const major=document.querySelector('#major').value;
+    const data={
+        name,
+        gender,
+        major,
+    }
+    axios({
+        method:'POST',
+        url:'/useradd',
+        data
+    }).then(res=>{
+        console.log("res",res)
+        if(res.data.result){
+            alert('회원정보 추가 완료')
+            window.location.href='/user';
+        }
+        // window.location.href='/user'
+    })
+    }
+</script>
+</html>
