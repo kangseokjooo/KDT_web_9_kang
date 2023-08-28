@@ -22,6 +22,13 @@ wss.on('connection',(socket)=>{
     // console.log(socket);
     console.log(wss.clients);
     console.log('클라이언트가 연결 되었습니다.');
+    //클라이언트 상태 확인
+    //0:웹소켓이 연결 시도중
+    //:1:웹소켓이 열린상태
+    //2:웹소켓이 닫히는중
+    //:3 웹소켓이 닫힌상태
+    //socket.readyState:웹 소켓의 클라이언트 상태를 나타내는 속성
+    console.log(wss.OPEN);
     //sockets 배열에 추가
     sockets.push(socket);
     //message event
@@ -36,6 +43,7 @@ wss.on('connection',(socket)=>{
         console.log(`클라이언트로 부터 받은 메세지: ${message}`)
         //socket.send(`서버 메시지:${message}`);
         sockets.forEach((elem)=>{
+            console.log(elem.readyState());
             elem.send(`${message}`);
         })
     });
