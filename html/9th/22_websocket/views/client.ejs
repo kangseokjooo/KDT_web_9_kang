@@ -46,6 +46,8 @@
             event.preventDefault();
             const n=chatForm.querySelector('#name').value;
             const msg=chatForm.querySelector('#message').value;
+            //서버가 모두 nodejs가 아니기 때문에 서버로 보낼때는 문자열형태로 보내야함
+            // socket.send(JSON.stringify({user:n,message:msg}));
             socket.send(n+":"+msg);
             msg.value = '';
         })
