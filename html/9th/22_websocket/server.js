@@ -1,6 +1,12 @@
+const http=require('http');
 const ws=require('ws');
 const express=require('express');
 const app=express();
+//http
+const server=http.createServer(app);
+//웹서버
+//웹소켓 서버접속
+const wss=new ws.Server({server});
 const PORT=8000;
 
 app.set('view engine','ejs');
@@ -9,12 +15,9 @@ app.get('/',(req,res)=>{
     res.render('client');
 })
 
-const server=app.listen(PORT,()=>{
-    console.log(`http://localhost:${PORT}`)
-});
 
-//웹소켓 서버접속
-const wss=new ws.Server({server});
+
+
 //브라우저를 담을 배열 변수
 const sockets=[];
 //socket 변수는 접속한 브라우저
@@ -57,3 +60,6 @@ wss.on('connection',(socket)=>{
     })
 });
 
+server.listen(PORT,()=>{
+    console.log(`http://localhost:${PORT}`)
+});
