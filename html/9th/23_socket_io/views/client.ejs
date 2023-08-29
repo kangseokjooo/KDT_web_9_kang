@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div> Hello world</div>
+    <!-- <ul></ul>
+    <form id="chat">
+        <input type="text" id="user" placeholder="사용자명"><br>
+        <input type="text" id="message" placeholder="채팅내용"><br>
+        <button>채팅</button>
+    </form> -->
+    <button id="b1">hello</button>
+    <button id="b2">study</button>
+    <button id="b3">bye</button><br>
+    <div id="resultBox"></div>
+    <script>
+        // const chatForm=document.querySelector('#chat');
+        // const ul =document.querySelector('ul');
+        const socket = io();
+        const b1=document.querySelector('#b1');
+        const b2=document.querySelector('#b2');
+        const b3=document.querySelector('#b3');
+        b1.addEventListener('click',(res)=>{
+            socket.emit('hello',{user:'hello',message:'안녕'})
+        })
+        b2.addEventListener('click',(res)=>{
+            socket.emit('study',{user:'study',message:'공부해'})
+        })
+        b3.addEventListener('click',(res)=>{
+            socket.emit('bye',{user:'bye',message:'잘가~'})
+
+        })
+        socket.on('backend',(arg)=>{
+            const resultBox=document.querySelector('#resultBox')
+            resultBox.textContent=`${arg.user}:${arg.message}`
+        })
+        //이벤트 생성
+        // socket.emit('open_message',{ name:'client',message:'Hello Server'},(res)=>{
+        //     console.log(res);
+        // });
+        // socket.on('backend_message',(arg)=>{
+        //     const li=document.createElement('li');
+        //     li.textContent=`${arg.name}:${arg.message}`;
+        //     ul.appendChild(li);
+        // })
+        // //form event
+        // chatForm.addEventListener('submit',(e)=>{
+        //     e.preventDefault();
+        //     const user=chatForm.querySelector('#user');
+        //     const msg=chatForm.querySelector('#message');
+        //     socket.emit('form_message',{name:user.value,message:msg.value});
+        // })
+    </script>
+</body>
+</html>
