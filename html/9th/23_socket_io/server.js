@@ -37,7 +37,6 @@ io.on('connection',(socket)=>{
         //io.to(socket.room).emit('create',res):특정방의 전체 사용자에게 메시지 전달
         socket.emit('chat',res);
         socket.broadcast.to(socket.room).emit('other',res);
-
    });
     socket.on('leave',()=>{
         socket.leave(socket.room);
