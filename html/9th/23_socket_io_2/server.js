@@ -74,7 +74,7 @@ io.on("connection", (socket) => {
         }
     });
 
-    socket.on("disconnect", () => {
+    socket.on("leave", () => {
         if (socket.room) {
             socket.leave(socket.room);
         }

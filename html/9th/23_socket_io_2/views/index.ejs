@@ -80,6 +80,7 @@
                 <select id="userList"></select>
                 <input type="text" id="message" placeholder="메세지 입력" />
                 <button>입력</button>
+                <button type="button" onclick="out()">나가기</button>
             </form>
         </div>
 
@@ -185,6 +186,11 @@
                 socket.emit("sendMessage", msg);
                 message.value=' ';
             });
+            function out(){
+                socket.emit('leave')
+                main.hidden=false;
+                body.hidden=true;
+            }
         </script>
     </body>
 </html>
