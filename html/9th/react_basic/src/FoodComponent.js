@@ -6,9 +6,10 @@ class FoodComponet extends Component{
         const style={color:'red'}
         return(
             <>
-                <div style={{fontSize:"50px"}}>내가 좋아하는 음식은 <span style={style}>{this.props.food}</span></div>
+                <div style={{fontSize:'50px'}}>내가 좋아하는 음식은 <span style={style}>{this.props.food}</span></div>
             </>
         )
+        
     }
     
 }
