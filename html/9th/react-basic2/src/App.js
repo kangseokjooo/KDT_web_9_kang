@@ -7,7 +7,8 @@
 // import ToggleFunc from "./ToggleFunc";
 // import TextFunc from "./TextFunc";
 // import TodoFunc from "./todoFunc";
-import Practice5 from "./Practice5";
+// import Practice5 from "./Practice5";
+import LifeCycleClass from "./LifeCycleClass";
 
 function App() {
   return <>
@@ -18,7 +19,8 @@ function App() {
     {/* <BoardSearch/> */}
     {/* <ToggleFunc/> */}
     {/* <TodoFunc/> */}
-    <Practice5/>
+    {/* <Practice5/> */}
+    <LifeCycleClass/>
   </>;
 }
 
