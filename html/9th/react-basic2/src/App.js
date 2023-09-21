@@ -6,7 +6,8 @@
 // import BoardSearch from "./BoardSearch";
 // import ToggleFunc from "./ToggleFunc";
 // import TextFunc from "./TextFunc";
-import TodoFunc from "./todoFunc";
+// import TodoFunc from "./todoFunc";
+import Practice5 from "./Practice5";
 
 function App() {
   return <>
@@ -16,7 +17,8 @@ function App() {
     {/* <CounterFunction/> */}
     {/* <BoardSearch/> */}
     {/* <ToggleFunc/> */}
-    <TodoFunc/>
+    {/* <TodoFunc/> */}
+    <Practice5/>
   </>;
 }
 
