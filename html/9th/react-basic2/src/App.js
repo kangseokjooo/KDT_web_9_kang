@@ -14,7 +14,8 @@
 // import {useState} from 'react'
 // import LifePractice2 from "./LifePractice2";
 // import BoardRefPractice from "./BoardRefPractice";
-import BoardRefFuncPractice from "./BoardRefFuncPractice";
+// import BoardRefFuncPractice from "./BoardRefFuncPractice";
+import SignupForm from "./ReducerPractice";
 function App() {
   // const [status,setStatus]=useState(true);
   // const removeComponent =()=>{
@@ -32,7 +33,9 @@ function App() {
     {/* <TodoFunc/> */}
     {/* <Practice5/> */}
     {/* <BoardRefPractice/> */}
-    <BoardRefFuncPractice/>
+    {/* <BoardRefFuncPractice/>
+     */}
+     <SignupForm/>
   </>;
 }
 
