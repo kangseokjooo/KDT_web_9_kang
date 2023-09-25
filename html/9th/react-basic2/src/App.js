@@ -13,6 +13,8 @@
 // import UserList from "./UserList";
 // import {useState} from 'react'
 // import LifePractice2 from "./LifePractice2";
+// import BoardRefPractice from "./BoardRefPractice";
+import BoardRefFuncPractice from "./BoardRefFuncPractice";
 function App() {
   // const [status,setStatus]=useState(true);
   // const removeComponent =()=>{
@@ -29,7 +31,8 @@ function App() {
     {/* <ToggleFunc/> */}
     {/* <TodoFunc/> */}
     {/* <Practice5/> */}
-    
+    {/* <BoardRefPractice/> */}
+    <BoardRefFuncPractice/>
   </>;
 }
 
