@@ -1,0 +1,25 @@
+@import './util.scss';
+
+
+.container{
+    .box{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        &.blue{
+            background-color: $color-blue;
+            @include rotateAnimation;
+        }
+        &.yellow{
+            background-color: $color-yellow;
+            @include rotateAnimation2
+        }
+        &.green{
+            background-color: $color-green;
+            @include rotateAnimation3
+        }
+    }
+}
+
+
+

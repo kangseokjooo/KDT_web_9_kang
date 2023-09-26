@@ -15,7 +15,9 @@
 // import LifePractice2 from "./LifePractice2";
 // import BoardRefPractice from "./BoardRefPractice";
 // import BoardRefFuncPractice from "./BoardRefFuncPractice";
-import SignupForm from "./ReducerPractice";
+// import SignupForm from "./ReducerPractice";
+// import SassPrac from "./11Style/SassPrac";
+import StyledComponentprac from "./11Style/StyledComponentprac";
 function App() {
   // const [status,setStatus]=useState(true);
   // const removeComponent =()=>{
@@ -35,7 +37,8 @@ function App() {
     {/* <BoardRefPractice/> */}
     {/* <BoardRefFuncPractice/>
      */}
-     <SignupForm/>
+     {/* <SassPrac/> */}
+     <StyledComponentprac/>
   </>;
 }
 
