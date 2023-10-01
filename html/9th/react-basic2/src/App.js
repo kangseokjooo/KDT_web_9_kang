@@ -17,7 +17,13 @@
 // import BoardRefFuncPractice from "./BoardRefFuncPractice";
 // import SignupForm from "./ReducerPractice";
 // import SassPrac from "./11Style/SassPrac";
-import StyledComponentprac from "./11Style/StyledComponentprac";
+// import StyledComponentprac from "./11Style/StyledComponentprac";
+// import StylePrac3 from "./11Style/StylePrac3";
+// import StylePrac4 from "./11Style/StylePrac4";
+// import Router from "./12Router/Router";
+
+import RouterPrac1 from "./12Router/RouterPrac1";
+
 function App() {
   // const [status,setStatus]=useState(true);
   // const removeComponent =()=>{
@@ -38,7 +44,10 @@ function App() {
     {/* <BoardRefFuncPractice/>
      */}
      {/* <SassPrac/> */}
-     <StyledComponentprac/>
+     {/* <StylePrac4/>
+      */}
+      {/* <Router/> */}
+      <RouterPrac1/>
   </>;
 }
 
