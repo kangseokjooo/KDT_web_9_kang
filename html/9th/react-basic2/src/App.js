@@ -22,7 +22,17 @@
 // import StylePrac4 from "./11Style/StylePrac4";
 // import Router from "./12Router/Router";
 
-import RouterPrac1 from "./12Router/RouterPrac1";
+import Cart from "./14Context/Cart";
+import MyContextProvider from "./14Context/MycontextProvider";
+import ProductList from "./14Context/ProductList";
+// import ProductList from "./14Context/ProductList";
+// import { MyContextCartFunc } from "./14Context/store/MyContextCart";
+// import { MyContextPrac } from "./14Context/store/MyContextPrac1";
+
+
+// import FormPracI from "./13Form/FormPrac";
+
+// import RouterPrac1 from "./12Router/RouterPrac1";
 
 function App() {
   // const [status,setStatus]=useState(true);
@@ -47,7 +57,15 @@ function App() {
      {/* <StylePrac4/>
       */}
       {/* <Router/> */}
-      <RouterPrac1/>
+      {/* <RouterPrac1/> */}
+      {/* <FormPracI/> */}
+      {/* <MyContextPrac>
+        <ContextPrac1/>
+      </MyContextPrac> */}
+      <MyContextProvider>
+        <ProductList/>
+        <Cart/>
+      </MyContextProvider>
   </>;
 }
 
