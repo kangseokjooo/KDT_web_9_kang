@@ -23,8 +23,12 @@
 // import Router from "./12Router/Router";
 
 import Cart from "./14Context/Cart";
-import MyContextProvider from "./14Context/MycontextProvider";
 import ProductList from "./14Context/ProductList";
+import { CartProvider } from "./14Context/store/cart-context";
+
+// import Cart from "./14Context/Cart";
+// import MyContextProvider from "./14Context/MycontextProvider";
+// import ProductList from "./14Context/ProductList";
 // import ProductList from "./14Context/ProductList";
 // import { MyContextCartFunc } from "./14Context/store/MyContextCart";
 // import { MyContextPrac } from "./14Context/store/MyContextPrac1";
@@ -62,10 +66,14 @@ function App() {
       {/* <MyContextPrac>
         <ContextPrac1/>
       </MyContextPrac> */}
-      <MyContextProvider>
+      {/* <MyContextProvider>
         <ProductList/>
         <Cart/>
-      </MyContextProvider>
+      </MyContextProvider> */}
+      <CartProvider>
+      <ProductList/>
+      <Cart/>
+      </CartProvider>
   </>;
 }
 
