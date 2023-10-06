@@ -1,8 +1,13 @@
-import Main from "./main";
+// import Main from "./main";
+
+import Counter from "./Counter";
+import Login from "./login";
 
 function App() {
   return <>
-    <Main/>
+    {/* <Main/> */}
+    <Login/>
+    <Counter/>
   </>
 }
 
