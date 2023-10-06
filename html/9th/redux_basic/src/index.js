@@ -1,4 +1,19 @@
-import { createStore } from 'redux';
+import React from "react";
+import  ReactDOM  from "react-dom/client";
+import App from "./App";
+import { Provider } from "react-redux";
+import store from "./store/todo";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
+
+/*import { createStore } from 'redux';
 
 const input = document.querySelector('#todo');
 const add = document.querySelector('#add');
