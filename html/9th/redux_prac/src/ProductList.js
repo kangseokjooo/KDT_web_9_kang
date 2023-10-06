@@ -4,7 +4,7 @@ import {useSelector,useDispatch} from 'react-redux'
 
 export default function ProductList() {
     const carts=useSelector(state=>state)
-    const total=carts.reduce((total,value)=>total+value.price,0)
+    const total=carts.reduce((total,value)=>total+value.price *value.quantity,0)
     const dispatch=useDispatch()
     const onClick=(products)=>{
         dispatch({type:ADD_CART,id:products.id,price:products.price,name:products.name})
@@ -31,7 +31,7 @@ export default function ProductList() {
         {carts.map((value)=>{
             return (
                 <li key={value.id}>
-                    {value.name}:{value.price}
+                    {value.name}:{value.price * value.quantity} (수량:{value.quantity})
                     <button onClick={()=>DELETE(value.id)}>X</button>
                 </li>
             )
