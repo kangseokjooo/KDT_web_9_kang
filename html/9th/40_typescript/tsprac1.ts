@@ -49,3 +49,12 @@ const sum2 = (...numbers: number[]): number => {
 
 
 console.log(sum2(...numbers));
+
+//실습5
+const arrElement=<T>(arr:T[],idxnum:number)=>{
+    if(arr.length -1 < idxnum){
+      return false;
+    }
+}
+
+console.log(arrElement<string>(['a'],1))
