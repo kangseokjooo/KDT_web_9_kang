@@ -21,9 +21,9 @@ const arrowTsFunc = (a: number, b: number): number => {
 const arrowTsFunc2 = (a: number, b: number): number => a * b;
 
 //return이 없는 함수
-function printFunc(a: string, b: string): void {
-  console.log(a, b);
-}
+// function printFunc(a: string, b: string): void {
+//   console.log(a, b);
+// }
 
 //////////////////////////////////////////////////////////////////////
 //never타입

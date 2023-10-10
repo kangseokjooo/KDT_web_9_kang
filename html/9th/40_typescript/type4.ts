@@ -22,3 +22,10 @@ function arrLength<T>(arr: T[]) {
 
 console.log(arrLength<string>(["a", "b", "c"]));
 console.log(arrLength<number>([1, 2, 3, 4, 5]));
+
+function printFunc<T>(x: T, y: T): T {
+    console.log(x)
+    console.log(y)
+    return x;
+}
+console.log(printFunc<string>("hi", "hello"));
